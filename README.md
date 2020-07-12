@@ -82,7 +82,7 @@ These plugins can be seen in action on my personal blog at [www.siira.io](https:
 
 ### RSS
 
-Works just like the [RSS plugin by MattByName](https://github.com/MattByName/Pico-RssMaker), but it's a little prettier. I wish I'd noticed that Pico has a (cookbook for RSS generation)[http://picocms.org/cookbook/] because it's probably just as good, if not better.
+Works just like the [RSS plugin by MattByName](https://github.com/MattByName/Pico-RssMaker), but it's a little prettier. I wish I'd noticed that Pico has a [cookbook for RSS generation](http://picocms.org/cookbook/) because it's probably just as good, if not better.
 
 ### Output
 Same as [PicoOutput by nliautaud](https://github.com/nliautaud/pico-output)
