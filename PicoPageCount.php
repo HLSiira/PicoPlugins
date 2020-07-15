@@ -23,7 +23,7 @@ class PicoPageCount extends AbstractPicoPlugin {
 
 	protected $items;
 
-	private $cacheDir = "content/cache/";
+	private $cacheDir = "cache/";
 	private $type = "slog";
 
 	public function onConfigLoaded(array &$config) {

@@ -4,9 +4,9 @@ class PicoCache extends AbstractPicoPlugin {
 
 	const API_VERSION = 3;
 
-	private $cacheDir = 'content/cache/';
+	private $cacheDir = 'cache/';
 	private $cacheTime = 604800; // 60*60*24*7, seven days
-	private $doCache = true;
+	private $doCache = false;
 	private $cacheFileName;
 
 	public function onRequestUrl(&$url) {
@@ -24,6 +24,14 @@ class PicoCache extends AbstractPicoPlugin {
 	public function on404ContentLoading() {
 		//don't cache error pages. This prevents filling up the cache with non existent pages
 		$this->doCache = false;
+	}
+
+	public function onMetaParsed(array &$meta) {
+		// echo json_encode($meta);
+		// die;
+		if (isset($meta["Cache"]) && $meta["Cache"] === false) {
+			$this->doCache = false;
+		}
 	}
 
 	public function onPageRendered(&$output) {
